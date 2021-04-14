@@ -1,5 +1,4 @@
 import ExpenseItem from './ExpenseItem'
-
 import './Expenses.css'
 
 function Expenses(props) {
@@ -7,7 +6,7 @@ function Expenses(props) {
 
   return (
     <div>
-      {expenses.map(item => <ExpenseItem key={item.id} expense={item} />)}
+      {expenses.map(item => <ExpenseItem className="expenses" key={item.id} expense={item} />)}
     </div>
   )
 }
