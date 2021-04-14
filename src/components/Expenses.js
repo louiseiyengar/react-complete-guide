@@ -7,10 +7,7 @@ function Expenses(props) {
 
   return (
     <div>
-      <ExpenseItem key={expenses[0].id} expense={expenses[0]}></ExpenseItem>
-      <ExpenseItem key={expenses[1].id} expense={expenses[1]}></ExpenseItem>
-      <ExpenseItem key={expenses[2].id} expense={expenses[2]}></ExpenseItem>
-      <ExpenseItem key={expenses[3].id} expense={expenses[3]}></ExpenseItem>
+      {expenses.map(item => <ExpenseItem key={item.id} expense={item} />)}
     </div>
   )
 }
