@@ -3,10 +3,13 @@ import './Expenses.css'
 
 function Expenses(props) {
   const expenses = props.expenseData;
+  const expenseItems = expenses.map(item => (
+    <ExpenseItem className="expenses" key={item.id} expense={item} />
+  ))
 
   return (
     <div>
-      {expenses.map(item => <ExpenseItem className="expenses" key={item.id} expense={item} />)}
+      {expenseItems}
     </div>
   )
 }
